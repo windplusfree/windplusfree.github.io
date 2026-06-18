@@ -1,0 +1,29 @@
+/* 彻底改造页脚：压窄高度 + 增加精细分割线 */
+#footer {
+    background: #ffffff !important;         /* 1. 设为和上方一样的纯白底色（或者 transparent） */
+    background-image: none !important;
+    box-shadow: none !important;
+
+    /* 2. 核心：高度变窄！把原本默认的上下间距从大几十像素直接压到 12px */
+    padding: 12px 0 !important;
+
+    /* 3. 核心：增加一条极细、淡淡的优雅分割线，把层次感拉回来 */
+    border-top: 1px solid #e3e8f7 !important;
+}
+
+/* 保证所有内部文字、链接依然保持截图中的优雅深灰 */
+#footer,
+#footer a,
+#footer .footer-separator,
+#footer .framework-info,
+#footer .copyright {
+    color: #4c4c4c !important;
+    text-decoration: none !important;
+    font-size: 13px !important;              /* 如果觉得还是宽，可以把字号也稍微缩一点 */
+    margin: 0 !important;                   /* 消除多余的外边距 */
+}
+
+/* 鼠标悬停变黑 */
+#footer a:hover {
+    color: #000000 !important;
+}
